@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"  />
+		<title></title>
+		<!--引入外部样式表-->
+		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<!--导航条-->
+		<header>
+			<div id="wrap">
+				<div id="logo">
+					<img src="img/home/shininglogo.png"/>
+				</div>
+				<div id="nav">
+					<div id="navSlider">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div id="navA">
+						<a href="index.html">Home</a>
+						<a href="templets/about.html">About</a>
+						<a href="templets/rendering.html">Rendering</a>
+						<a href="templets/3d animation.html">3D Animation</a>
+						<a href="templets/bim.html">Bim</a>
+						<a href="templets/contact.html">Contact</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--主体-->
+		<div id="main">
+			<div class="con" id="rend">
+				<div class="oImg">
+					<a href="templets/rendering.html">
+						<img src="img/home/home_pic_one.png"/>
+						<img src="img/home/home_pic_one_h.png"/>
+					</a>
+				</div>
+				<div class="post postR"></div>
+				<div class="text textR">
+					<a href="templets/rendering.html">
+						<h3>RENDERINGS</h3>
+						<p>Masterplan、Public Building、commercial Building、Residential Building、Landscape Design</p>
+					</a>
+				</div>
+			</div>
+			<div class="con" id="bim">
+				<div class="text textL">
+					<a href="templets/bim.html">
+						<h3>BIM</h3>
+						<p>Model Completion、Clash Detection、MEP Integration、Curtain Wall Remedying、BIM Consulting</p>
+					</a>
+				</div>
+				<div class="post postL"></div>
+				<div class="oImg">
+					<a href="templets/bim.html">
+						<img src="img/home/home_pic_two.jpg"/>
+						<img src="img/home/home_pic_two_h.png"/>
+					</a>
+				</div>
+			</div>
+			<div class="con" id="anim">
+				<div class="oImg" id="oImgL">
+					<a href="templets/3d animation.html">
+						<img src="img/home/homes_pic_three.jpg"/>
+						<img src="img/home/homes_pic_three_h.jpg"/>
+					</a>
+				</div>
+				<div class="post postR"></div>
+				<div class="text textR">
+					<a href="templets/3d animation.html">
+						<h3>3D ANIMATION</h3>
+						<p>Real estate advertising animation Design scheme Animation Corporate promotional Animation</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<footer>
+			<div id="email">
+				<a href="javascript:;">
+					<img src="img/home/mail.jpg"/>
+					<img src="img/home/mail_h.jpg"/>
+				</a>
+			</div>
+			<div id="face">
+				<a href="https://www.facebook.com/">
+					<img src="img/home/facebook.jpg"/>
+					<img src="img/home/facebook_h.jpg"/>
+				</a>
+				<a href="http://www.youtobe.com/">
+					<img src="img/home/youtube.jpg"/>
+					<img src="img/home/youtube_h.jpg"/>
+				</a>
+				<a href="https://www.linkedln.com">
+					<img src="img/home/linkedln.jpg"/>
+					<img src="img/home/linkedln_h.jpg"/>
+				</a>
+				<a href="http://www.twitter.com">
+					<img src="img/home/twitter.jpg"/>
+					<img src="img/home/twitter_h.jpg"/>
+				</a>
+			</div>
+			<p>Copyright © 1998-2015 shining Group</p>
+		</footer>
+	</body>
+	<!--引入Jq-->
+	<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--引入页脚的js-->
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+	<!--行为-->
+	<script type="text/javascript">
+		$(document).ready(mainFn)
+		function mainFn(){
+			$('.con').each(overFn);
+			function overFn(){
+				$(this).on('mouseover',function(){
+					$(this).find('img').eq(0).hide().siblings().show();
+					$(this).children('.post').css('background','rgb(207,219,0)');
+				});
+				$(this).on('mouseout',function(){
+					$(this).find('img').eq(1).hide().siblings().show();
+					$(this).children('.post').css('background','rgb(126,126,126)');
+				});
+			}
+		}
+	</script>
+</html>

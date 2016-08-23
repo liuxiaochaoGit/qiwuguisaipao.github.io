@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"  />
+		<title></title>
+		<!-- 引入页头和页脚 -->
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<style type="text/css">
+			/*自定义样式*/
+			#main{
+				background: rgb(227,227,227);
+				position: relative;
+			}
+			#main #box{
+				width: 1200px;
+				margin: auto;
+			}
+			#main #text{
+				position: absolute;
+				top: 50px;
+				left: 10px;
+				width: 500px;
+			}
+			#main #text h6{
+				font-size: 30px;
+				padding: 30px 0;
+				font-family:'STHeiti',Arial,Helvetica,'Microsoft YaHei','sans-serif';
+			}
+			#main #text p{
+				font-size: 16px;
+				line-height: 30px;
+				margin: 20px 0;
+				font-family:'STHeiti',Arial,Helvetica,'Microsoft YaHei','sans-serif';
+			}
+			#main #photo{
+				position: absolute;
+				left: 0px;
+				width: 100%;
+				background: rgb(227,227,227);
+			}
+			#main #photo img{
+				margin: 10px 40px 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- 结构 -->
+		<header>
+			<!-- 页眉 -->
+			<div id="wrap">
+				<!-- logo -->
+				<div id="logo">
+					<img src="img/home/shininglogo.png"/>
+				</div>
+				<!-- 导航 -->
+				<div id="nav">
+					<div id="navSlider">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div id="navA">
+						<a href="../index.html">Home</a>
+						<a href="about.html">About</a>
+						<a href="rendering.html">Rendering</a>
+						<a href="3d animation.html">3D Animation</a>
+						<a href="bim.html">Bim</a>
+						<a href="contact.html">Contact</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- 页面主体 -->
+		<div id="main">
+			<div id="box">
+				<img src="img/about/world_map.png"/>
+				<div id="text">
+					<h6>About Us</h6>
+					<p id="pageA">Shanghai Shining is a creative corporation focused on helping architects and owners turn their construction from design stages into visual images or videos, perfectly showing the essence of construction.</p>
+					<p id="pageB">Since 1998,  we have finished more than 20000 architectural 3D visualizations for nearly 2000 architect firms both at home and abroad. We have used 3D technology, photography, graphic art, and architectonic to provide clients with services such as CG images,  CG animations, BIM and 3D products.</p>
+				</div>
+				<div id="photo">
+					<img src="img/about/aedas.png"/>
+					<img src="img/about/gensler.png"/>
+					<img src="img/about/bdp.png"/>
+					<img src="img/about/ch2mhill.png"/>
+					<img src="img/about/benoy.png"/>
+					<img src="img/about/sasaki.png"/>
+					<img src="img/about/edsa.png"/>
+					<img src="img/about/kpf.png"/>
+				</div>
+			</div>
+			<!-- 页脚 -->
+			<footer>
+				<!-- 信封小图标 -->
+				<div id="email">
+					<a href="javascript:;">
+						<img src="img/home/mail.jpg"/>
+						<img src="img/home/mail_h.jpg"/>
+					</a>
+				</div>
+				<!-- 四个小图标 -->
+				<div id="face">
+					<a href="https://www.facebook.com/">
+						<img src="img/home/facebook.jpg"/>
+						<img src="img/home/facebook_h.jpg"/>
+					</a>
+					<a href="http://www.youtobe.com/">
+						<img src="img/home/youtube.jpg"/>
+						<img src="img/home/youtube_h.jpg"/>
+					</a>
+					<a href="https://www.linkedln.com">
+						<img src="img/home/linkedln.jpg"/>
+						<img src="img/home/linkedln_h.jpg"/>
+					</a>
+					<a href="http://www.twitter.com">
+						<img src="img/home/twitter.jpg"/>
+						<img src="img/home/twitter_h.jpg"/>
+					</a>
+				</div>
+				<!-- 版权 -->
+				<p>Copyright © 1998-2015 shining Group</p>
+			</footer>
+		</div>
+	</body>
+	<!-- 引入jQ -->
+	<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- 引入页眉页脚的样式 -->
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+</html>

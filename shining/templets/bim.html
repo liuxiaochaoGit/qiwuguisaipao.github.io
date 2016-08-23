@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- 引入页头和页脚的样式 -->
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<style type="text/css">
+			/*自定义样式*/
+			/*整体样式*/
+			header{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 100;
+			}
+			#main ._div{
+				position: relative;
+				width: 100%;
+				height: 588px;
+			}
+			@media screen and (min-width: 1200px){
+				#main .box{
+					width: 1200px;
+					margin: 0 auto;
+				}
+			}
+			@media screen and (min-width: 830px) and (max-width: 1100px){
+				#main .box{
+					width: 100%;
+					margin: 0 auto;
+				}
+			}
+			#main .box{
+				position: relative;
+				height: 100%;
+				/*border:1px solid black;*/
+			}
+			#main #model{
+				top: 66px;
+			}
+			#main #model,#main #mep,#main #bim{
+				background: rgb(229,229,229);
+			}
+			#main #clash,#main #curtain{
+				background: white;
+			}
+			/*文字样式*/
+			#main .text{
+				padding: 10% 0 5% 0;
+				z-index: 1;
+				/*position: absolute;
+				top: 20%;*/
+				/*left: 0;*/
+			}
+			#main .text .pA{
+				width: 22px;
+				height: 22px;
+				display: inline-block;
+				font-size: 22px;
+				color: rgb(97,97,97);
+				border:1px solid rgb(97,97,97);
+				border-radius: 6px;
+				text-align: center;
+				line-height: 22px;
+			}
+			#main .text h3{
+				height: 22px;
+				display: inline-block;
+				font-size: 22px;
+				color: rgb(97,97,97);
+				padding-left: 6px;
+				line-height: 22px;
+				font-family:'STHeiti',Arial,Helvetica,'Microsoft YaHei','sans-serif';
+			}
+			#main .text .pB{
+				margin-top: 20px;
+				width: 30%;
+				line-height: 20px;
+				font-size: 16px;
+			}
+			/*图片样式*/
+			#main .photo .mImg{
+				display: block;
+				float: left;
+				width: 10%;
+				height: 10%;
+			}
+			/*一和二里面的擎天柱*/
+			#main #model .buildImg{
+				position: absolute;
+				bottom: 0;
+				right: 56px;
+				width: 330px;
+				height: 500px;
+			}
+			#main .photo .cImg{
+				display: block;
+				float: left;
+				margin-right: 20px;
+				width: 18%;
+				height: 18%;
+			}
+			#main #clash .buildImg{
+				position: absolute;
+				top: 0;
+				right: 100px;
+				width: 330px;
+				height: 432px;
+			}
+			/*三里面的图片和文字布局*/
+			#main #mep .text{
+				padding: 10% 0 5% 35%;
+			}
+			#main #mep .text .pB{
+				width: 50%;
+			}
+			#main #mep .photo{
+				padding-left: 35%;
+			}
+			#main #mep .photo img{
+				width: 36%;
+				height: 36%;
+			}
+			#main #mep .buildImg{
+				position: absolute;
+				top: 28%;
+				left:0;
+				width: 312px;
+				height: 432px;
+			}
+			/*四里面的文本和图片*/
+			#main #curtain .text{
+				position: absolute;
+				left: 200px;
+				z-index: 1;
+			}
+			#main #curtain .photo{
+				position: absolute;
+				top: 260px;
+				left: 200px;
+				z-index: 1;
+			}
+			#main #curtain .photo img{
+				display: block;
+				margin-top: 8px;
+				width: 80%;
+				height: 80%;
+			}
+			#main #curtain .buildImg{
+				position: absolute;
+				top: 0;
+				left:0;
+				width: 312px;
+				height: 432px;
+				opacity: 0.5;
+			}
+			/*五的图片*/
+			#main #curtain .buildImg2{
+				position: absolute;
+				bottom: 0;
+				right: 54px;
+				width: 330px;
+				height: 432px;
+			}
+			#main #bim .buildImg{
+				position: absolute;
+				top: 0;
+				right: 100px;
+				width: 330px;
+				height: 432px;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- 结构 -->
+		<!-- 页眉 -->
+		<header>
+			<!-- logo -->
+			<div id="wrap">
+				<div id="logo">
+					<img src="img/home/shininglogo.png"/>
+				</div>
+				<!-- 导航 -->
+				<div id="nav">
+					<div id="navSlider">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div id="navA">
+						<a href="../index.html">Home</a>
+						<a href="about.html">About</a>
+						<a href="rendering.html">Rendering</a>
+						<a href="3d animation.html">3D Animation</a>
+						<a href="bim.html">Bim</a>
+						<a href="contact.html">Contact</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- 页面主体 -->
+		<div id="main">
+			<div id="model" class="_div">
+				<div class="box">
+					<div class="text">
+						<p class="pA">1</p>
+						<h3>MODEL COMPLETION</h3>
+						<p class="pB">Establishing and creating the visible and multi-dimension Architecture, Structural and MEP</p>
+					</div>
+					<div class="photo">
+						<img src="img/bim/BIM-p1-1.png"/ class="mImg">
+						<img src="img/bim/BIM-p1-2.png"/ class="mImg">
+						<img src="img/bim/BIM-p1-3.png"/ class="mImg">
+					</div>
+					<img src="img/bim/BIM-building1.png" alt="" class="buildImg">
+				</div>
+			</div>
+			<div id="clash" class="_div">
+				<div class="box">
+					<div class="text">
+						<p class="pA">2</p>
+						<h3>CLASH DETECTION</h3>
+						<p class="pB">Completing the clash detection among various design parties,engineers and even different organisations in con struction drawings.</p>
+					</div>
+					<div class="photo">
+						<img src="img/bim/BIM-p2-1.jpg"/ class="cImg">
+						<img src="img/bim/BIM-p2-2.jpg"/ class="cImg">
+					</div>
+					<img src="img/bim/BIM-building1-half.png" alt="" class="buildImg">
+				</div>
+			</div>
+			<div id="mep" class="_div">
+				<div class="box">
+					<div class="text">
+						<p class="pA">3</p>
+						<h3>MEP INTEGRATION</h3>
+						<p class="pB">Profoundly completing the pipeline integration, design coordination and intra-organisational cooperation between Plumbing, HVAC and Electrical engineering.</p>
+					</div>
+					<div class="photo">
+						<img src="img/bim/BIM-p3-1.jpg"/ class="meImg">
+						<img src="img/bim/BIM-p3-2.jpg"/ class="meImg">
+					</div>
+					<img src="img/bim/building2-half-t.png" alt="" class="buildImg" >
+				</div>
+			</div>
+			<div id="curtain" class="_div">
+				<div class="box">
+					<div class="text">
+						<p class="pA">4</p>
+						<h3>CURTAIN WALL REMEDYING</h3>
+						<p class="pB">Creating the abnormity wall based on parametric design tools, and completing detailed curtain wall nodes visibly.</p>
+					</div>
+					<div class="photo">
+						<img src="img/bim/BIM-p4-1.jpg"/ class="cuImg">
+						<img src="img/bim/BIM-p4-2.jpg"/ class="cuImg">
+					</div>
+					<img src="img/bim/BIM-building2-half.png" alt="" class="buildImg">
+					<img src="img/bim/building3-half-t.png" alt="" class="buildImg2">
+				</div>
+			</div>
+			<div id="bim" class="_div">
+				<div class="box">
+					<div class="text">
+						<p class="pA">5</p>
+						<h3>BIM CONSULTING</h3>
+						<p class="pB">To help you to precisely know what is BIM? How BIM use? When and who is suitably to implement BIM?</p>
+					</div>
+					<img src="img/bim/building3-half-b.png" alt="" class="buildImg">
+				</div>
+			</div>
+		</div>
+		<!-- 页脚 -->
+		<footer>
+			<!-- 小信封图标 -->
+			<div id="email">
+				<a href="javascript:;">
+					<img src="img/home/mail.jpg"/>
+					<img src="img/home/mail_h.jpg"/>
+				</a>
+			</div>
+			<!-- 四个小图片 -->
+			<div id="face">
+				<a href="https://www.facebook.com/">
+					<img src="img/home/facebook.jpg"/>
+					<img src="img/home/facebook_h.jpg"/>
+				</a>
+				<a href="http://www.youtobe.com/">
+					<img src="img/home/youtube.jpg"/>
+					<img src="img/home/youtube_h.jpg"/>
+				</a>
+				<a href="https://www.linkedln.com">
+					<img src="img/home/linkedln.jpg"/>
+					<img src="img/home/linkedln_h.jpg"/>
+				</a>
+				<a href="http://www.twitter.com">
+					<img src="img/home/twitter.jpg"/>
+					<img src="img/home/twitter_h.jpg"/>
+				</a>
+			</div>
+			<!-- 版权 -->
+			<p>Copyright © 1998-2015 shining Group</p>
+		</footer>
+	</body>
+	<!-- 引入jQ -->
+	<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- 引入页脚的样式 -->
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+	<!-- 自定义行为 -->
+	<script type="text/javascript">
+
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

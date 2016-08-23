@@ -1,0 +1,124 @@
+/*页面主体的样式和响应式*/
+@media screen and (min-width: 730px){
+	#main{
+		width:1100px;
+		margin: auto;
+	}
+	#main .con{
+		position: relative;
+		height: 166px;
+		width:100%;
+		border-bottom:1px solid rgb(225,225,225);
+		transition: all 2s;
+	}
+	#main .con div{
+		float: left;
+	}
+	#main img{
+		position: absolute;
+		top: 0;
+		/*left: 0;*/
+		display: block;
+		height: 166px;
+	}
+	#main #oImgL{
+		position: absolute;
+		left: 0;
+	}
+	#main .textR{
+		position: absolute;
+		left: 660px;
+	}
+	#main .postR{
+		position: absolute;
+		left: 610px;
+	}
+	#main .oImg img:last-child{
+		display: none;
+	}
+	#main .post{
+		width: 20px;
+		height: 166px;
+		background: rgb(126,126,126);
+	}
+	#main .text{
+		width: 32%;
+		padding-left:20px  ;
+	}
+	#main .textt h3{
+		/*float: right;*/
+		padding: 10px 50px;
+	}
+	#main .text h3{
+		font-size: 30px;
+		color: black;
+		padding: 10px 0;
+	}
+	#main .text p{
+		font-size: 16px;
+		color: black;
+		font-family:'STHeiti',Arial,Helvetica,'Microsoft YaHei','sans-serif';
+		line-height: 30px;
+	}
+}
+@media screen and (max-width: 730px){
+	#main{
+		width: 100%;
+		height: 100%;
+	}
+	#main .con{
+		position: relative;
+		height: 300px;
+		width:100%;
+		border-bottom:1px solid rgb(225,225,225);
+		transition: all 2s;
+	}
+	#main .oImg img:last-child{
+		display: none;
+	}
+	#main .oImg img{
+		width: 100%;
+		height: 80%;
+	}
+	#main .text h3{
+		font-size: 22px;
+		color: black;
+		width: 100%;
+		text-align: center;
+		/*padding: 10px 100px;*/
+		padding: 10px 0;
+		/*padding-left: 40%;*/
+	}
+	#main .text p{
+		font-size: 14px;
+		color: black;
+		font-family:'STHeiti',Arial,Helvetica,'Microsoft YaHei','sans-serif';
+		line-height: 30px;
+		padding-left: 10px;
+	}
+	#main .con .text{
+		position: absolute;
+		bottom: 20px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<style type="text/css">
+			/*自定义样式*/
+			#main{
+				width: 100%;
+			}
+			#main .swiper-container img{
+				width: 100%;
+				height: 100%;
+			}
+			/*瀑布流样式*/
+			#waterWrap{
+				width: 100%;
+				margin: auto;
+				padding-bottom: 20px;
+			}
+			#waterWrap #waterbox{
+				width: 90%;
+				margin: auto;
+			}
+			#waterWrap ul{
+				float: left;
+				width: 24%;
+				margin-left: 1%;
+			}
+			#waterWrap ul li{
+				position: relative;
+				margin-top: 10px;
+			}
+			#waterWrap ul img{
+				position: relative;
+				z-index: 0;
+				width: 100%;
+			}
+			#waterWrap ul li div{
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				/*opacity: 0.2;*/
+				background: rgba(0,0,0,0.5);
+				display: none;
+
+			}
+			#waterWrap ul div img{
+				position: absolute;
+				top: 45%;
+				left: 45%;
+				display: block;
+				margin: auto;
+				width: 30px;
+				height: 30px;
+			}
+			/*放大图片显示容器的样式*/
+			#waterWrap #center{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				width: 100%;
+				height: 100%;
+				background: rgba(0,0,0,0.5);
+				display: none;
+				overflow: hidden;
+			}
+			#waterWrap #center img{
+				position: absolute;
+				top: 20%;
+				left: 20%;
+				width: 60%;
+				height: 60%;
+				border: 10px solid white;
+
+			}
+		</style>
+	</head>
+	<body>
+	<!-- 结构 -->
+		<header>
+			<div id="wrap">
+				<!-- logo -->
+				<div id="logo">
+					<img src="img/home/shininglogo.png"/>
+				</div>
+				<!-- 导航 -->
+				<div id="nav">
+					<div id="navSlider">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div id="navA">
+						<a href="../index.html">Home</a>
+						<a href="about.html">About</a>
+						<a href="rendering.html">Rendering</a>
+						<a href="3d animation.html">3D Animation</a>
+						<a href="bim.html">Bim</a>
+						<a href="contact.html">Contact</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- 页面主体 -->
+		<div id="main">
+			<!-- 轮播图 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						 <img src="img/rendering/datu1.jpg"/>
+					</div>
+				    <div class="swiper-slide">
+				    		<img src="img/rendering/datu2.jpg"/>
+				    </div>
+				    <div class="swiper-slide">
+				    		<img src="img/rendering/datu3.jpg"/>
+				    </div>
+				</div>
+				<div class="swiper-scrollbar"></div>
+				<div class="swiper-button-prev"></div>
+    				<div class="swiper-button-next"></div>
+			</div>
+			<!-- 瀑布流 -->
+			<div id="waterWrap">
+				<div id="waterbox">
+					<ul></ul>
+					<ul></ul>
+					<ul></ul>
+					<ul></ul>
+				</div>
+				<!-- 蒙版 -->
+				<div id="center"></div>
+			</div>
+		</div>
+		<!-- 页脚 -->
+		<footer>
+			<!-- 信封小图标 -->
+			<div id="email">
+				<a href="javascript:;">
+					<img src="img/home/mail.jpg"/>
+					<img src="img/home/mail_h.jpg"/>
+				</a>
+			</div>
+			<!-- 四个小图标 -->
+			<div id="face">
+				<a href="https://www.facebook.com/">
+					<img src="img/home/facebook.jpg"/>
+					<img src="img/home/facebook_h.jpg"/>
+				</a>
+				<a href="http://www.youtobe.com/">
+					<img src="img/home/youtube.jpg"/>
+					<img src="img/home/youtube_h.jpg"/>
+				</a>
+				<a href="https://www.linkedln.com">
+					<img src="img/home/linkedln.jpg"/>
+					<img src="img/home/linkedln_h.jpg"/>
+				</a>
+				<a href="http://www.twitter.com">
+					<img src="img/home/twitter.jpg"/>
+					<img src="img/home/twitter_h.jpg"/>
+				</a>
+			</div>
+			<!-- 版权 -->
+			<p>Copyright © 1998-2015 shining Group</p>
+		</footer>
+	</body>
+	<!--导入jq-->
+	<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--引入外部js-->
+	<script src="js/footer.js" type="text/javascript" charset="utf-8"></script>
+	<!--移入swiper-->
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--自定义行为-->
+	<script type="text/javascript">
+		//加载完再执行
+		$(document).ready(mainFn);
+		//主函数
+		function mainFn(){
+			//swiper
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 5000,//可选选项，自动滑动
+				scrollbar:'.swiper-scrollbar',
+				scrollbarHide:false,
+				prevButton:'.swiper-button-prev',
+				nextButton:'.swiper-button-next',
+			})
+			//瀑布流
+			function waterFn(){
+				//获取ul
+				var oUl = document.querySelectorAll('#waterWrap ul');
+				//定义一个数组存放图片
+				var imgArr = [];
+				//将图片放在数组里
+				for(var i = 0; i <= 30 ; i++){
+					var img = new Image();
+					img.src = 'img/rendering/rd' + i + '.jpg';
+					imgArr.push(img);
+				}
+				//循环创建li  并添加到ul里面
+				for(var i = 0;i < imgArr.length;i++){
+					imgArr[i].onload = function(){
+						var li = document.createElement('li');
+						var _width = this.width;
+						var _height = this.height;
+						//根据宽计算高度比例
+						var scale = oUl[0].offsetWidth / _width;
+						var imgHeight = _height * scale;
+						//把这个高度给li
+						li.style.height = imgHeight;
+						//假设第一个ul的高度最低
+						var minUl = oUl[0];
+						//通过判断得出高度最低的ul
+						for(var j = 0;j < oUl.length;j++){
+							if(minUl.offsetHeight > oUl[j].offsetHeight){
+								minUl = oUl[j];
+							}
+						}
+						//往最低的ul里面添加li
+						minUl.appendChild(li);
+						//把照片添加到li里面
+						li.innerHTML = '<div><img src="img/rendering/big.png"></div><img class="onImg" src="' + this.src +'">';
+						//给li命名
+						li.className = 'oLi';
+					}
+				}
+
+			}
+			waterFn();
+			//图片的鼠标移入事件
+			$('#waterbox').on('mouseover','.oLi',function(){
+				//首先让蒙版显示
+				$(this).children('div').show(0,function(){
+					console.log($(this));
+					//图片的点击放大事件
+					$(this).on('click',function(){
+						//把图片添加到一个div里
+						$('#waterWrap #center').append($(this).siblings().clone());
+						//让这个div显示
+						$('#waterWrap #center').show(0,hideFn);
+					});
+				});
+			})
+			//大图片的点击事件
+			function hideFn(){
+				$('#waterWrap #center').on('click',function(){
+					//移除添加进来的图片
+					$('#waterWrap #center').children('img').remove();
+					//div隐藏
+					$('#waterWrap #center').hide();
+				})
+
+			}
+			//鼠标移出图片事件
+			$('#waterbox').on('mouseout','.oLi',function(){
+				//让蒙版隐藏
+				$(this).children('div').hide();
+
+			})
+		}
+
+	</script>
+</html>

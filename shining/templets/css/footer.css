@@ -1,0 +1,144 @@
+/* 标签样式初始化 */
+body{margin:0;padding:0;background:#fff;font-size:14px;font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+img{border:0;}
+ul,li{list-style-type:none;}
+a{color:#00007F;text-decoration:none;}
+a:hover{text-decoration:none;}
+/*自定义样式*/
+header{
+	width: 100%;
+	height: 66px;
+	background: rgb(27,27,27);
+}
+@media screen and (min-width: 1200px){
+	header #wrap{
+		width: 1200px;
+		margin: auto;
+	}
+	header #nav #navSlider{
+		display: none;
+	}
+	#nav a{
+	display: inline-block;
+	padding: 6px;
+	border-radius: 6px;
+	margin-left:15px;
+	font-size: 18px;
+	color: #aaa;
+	}
+	#nav a:hover{
+		border: 1px solid #ccc;
+		color: white;
+	}
+}
+@media screen and (min-width: 730px) and (max-width: 1200px){
+	header #wrap{
+		width: 100%;
+		margin: auto;
+	}
+	header #nav #navSlider{
+		display: none;
+	}
+	#nav a{
+		display: inline-block;
+		padding: 6px;
+		border-radius: 6px;
+		margin-left:15px;
+		font-size: 18px;
+		color: #aaa;
+	}
+	#nav a:hover{
+		border: 1px solid #ccc;
+		color: white;
+	}
+}
+@media screen and (max-width: 730px){
+	header #wrap{
+		width: 100%;
+		margin: auto;
+	}
+	header #nav #navA{
+		position: absolute;
+		top: 66px;
+		right: 0;
+		width: 150px;
+		border:1px solid cyan;
+		background: rgba(0,0,0,0.8);
+		border-radius: 10px;
+		display: none;
+		z-index: 10;
+	}
+	header #nav a{
+		display: inline-block;
+		padding: 6px;
+		border-radius: 6px;
+		margin-left:15px;
+		font-size: 18px;
+		color: #aaa;
+	}
+	#nav a:hover{
+		border: 1px solid #ccc;
+		color: white;
+	}
+	header #nav #navSlider{
+		cursor: pointer;
+	}
+	header #nav #navSlider div{
+		display: block;
+		width: 30px;
+		height: 4px;
+		background: rgb(206,217,65);
+		margin: 6px;
+		border-radius: 6px;
+	}
+}
+#logo{
+	padding: 15px 0;
+	float: left;
+}
+#nav{
+	float: right;
+	/*margin-top: -50px;*/
+	padding: 15px 6px;
+}
+#nav a{
+	display: inline-block;
+	padding: 6px;
+	border-radius: 6px;
+	margin-left:15px;
+	font-size: 18px;
+	color: #aaa;
+}
+#nav a:hover{
+	border: 1px solid #ccc;
+	color: white;
+}
+footer{
+	display: block;
+	text-align: center;
+	width: 220px;
+	height: 130px;
+	margin: 0 auto;
+}
+footer #email{
+	margin: 15px ;
+}
+footer #email img{
+	width: 24px;
+	height: 18px;
+}
+footer #face img{
+	width: 24px;
+	height: 24px;
+	margin-left: 4px;
+}
+footer p{
+	width: 220px;
+	font-size: 12px;
+	color:rgb(128,128,163);
+	padding: 30px 5px;
+}
+footer a img:last-child{
+	display: none;
+}
