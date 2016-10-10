@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.dvmtWrap{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: url('../img/licheng.bg.jpg') no-repeat;
+			background-size: 100% 100%;
+			overflow: hidden;
+		}
+		.dvmtWrap img{
+			position: absolute;
+			top:70%;
+			left: 50%;
+			margin-left: -500px;
+			display: block;
+			width: 1000px;
+			opacity: 0;
+		}
+		.aBack{
+			display: block;
+			text-decoration:none;
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			width: 100px;
+			height: 30px;
+			margin-left: -50px;
+			color: white;
+			text-align: center;
+			line-height: 30px;
+			border:1px solid white;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="dvmtWrap">
+		<img src="../img/licheng01.png" alt="">
+		<a href="../index.html#page2" class="aBack">BACK ></a>
+	</div>
+</body>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		animateFn();
+		// 动画
+		function animateFn(){
+			$('.dvmtWrap img').animate({
+				top:'26%',
+				opacity:'1'
+			},1000,function(){
+				$('.dvmtWrap a').animate({
+					bottom:'100px',
+					opacity:'1'
+				},1000);
+			});
+		}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

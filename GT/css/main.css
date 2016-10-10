@@ -1,0 +1,809 @@
+/*自定义样式*/
+.img2{
+	width: 100%;
+	display: none;
+}
+.section{
+	overflow: hidden;
+	background-size: 100% 100%;
+}
+/*导航栏样式*/
+.nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 96px;
+	background: rgba(0,0,0,0.5);
+	border-bottom: 1px solid white;
+	font-size: 12px;
+	z-index: 10;
+}
+.nav a{
+	color: white;
+	transition: all 0.2s;
+}
+.nav .navBar:hover a{
+	color:rgb(214,199,175);
+}
+.nav .navCon{
+	width: 1200px;
+	margin: auto;
+}
+.nav .navBar{
+	float: left;
+	height: 68px;
+	text-align: center;
+	padding-top: 28px;
+	border-left: 1px solid white;
+	line-height: 20px;
+}
+.nav .navBar1{
+	width: 130px;
+}
+.nav .navBar2{
+	width: 100px;
+}
+.nav .navImg{
+	float: left;
+	height: 86px;
+	width: 120px;
+	border-left: 1px solid white;
+	padding-top:10px;
+	padding-left: 30px;
+}
+.nav .navImg img{
+	width: 85px;
+	height: 69px;
+}
+.nav .search{
+	float: left;
+	height: 56px;
+	text-align: center;
+	padding-top: 40px;
+	padding-left: 10px;
+	border-left: 1px solid white;
+}
+.nav .search img{
+	width: 19px;
+	height: 20px;
+}
+/*轮播图样式*/
+.carousel{
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.swiper-container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+/*分页器*/
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  background: black;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: red;
+}
+/*page2 样式*/
+#section1{
+	width: 100%;
+	height: 100%;
+	background: url(../img/page2.bg.jpg)  no-repeat;
+}
+#section1 .titleImg{
+	position: absolute;
+	left: 39%;
+	top: -10%;
+	width: 22%;
+	opacity: 0;
+}
+#section1 .titleImg img{
+	width: 100%;
+	height: 100%;
+}
+#section1 .pageCon{
+	position: relative;
+	top: 300px;
+	margin: auto;
+	width: 1000px;
+	height: 350px;
+}
+#section1 .pageText{
+	position: absolute;
+	float: left;
+	width: 212px;
+	height: 201px;
+	background: url(../img/page2.btn_bg1.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	cursor: pointer;
+}
+#section1 .pageText .bGt{
+	position: absolute;
+	top: 54px;
+	left: 50px;
+	font-size: 26px;
+}
+#section1 .pageText .pGt{
+	position: absolute;
+	top: 104px;
+	left: 60px;
+	font-size: 16px;
+	color:rgb(136,136,136);
+}
+#section1 .pageText .bLast{
+	left: 20px;
+}
+#section1 .pageImg{
+	position: absolute;
+	float: left;
+	width: 212px;
+	height: 225px;
+	cursor: pointer;
+}
+#section1 .pageImg img{
+	width: 100%;
+	height: 100%;
+}
+#section1 .box{
+	position: absolute;
+	top: 900px;
+}
+#section1 .boxFirst{
+	left: 100px;
+	animation-delay: 0s;
+}
+#section1 .boxSecond{
+	left: 200px;
+	animation-delay: 2s;
+}
+#section1 .boxThird{
+	left: 260px;
+	animation-delay: 3s;
+}
+#section1  .pageTextF{
+	top: 0px;
+	left: 100px;
+}
+#section1  .pageImgF{
+	top: 130px;
+	left: 0;
+}
+#section1  .pageTextS{
+	top: 0px;
+	left: 210px;
+}
+#section1  .pageImgS{
+	top: 130px;
+	left: 110px;
+}
+#section1  .pageTextT{
+	top: 0px;
+	left: 360px;
+}
+#section1  .pageImgT{
+	top: 130px;
+	left: 260px;
+}
+/*page3 样式*/
+#section2{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(1).jpg') no-repeat;
+}
+#section2 .pageThirdCon{
+	position: absolute;
+	top: 200%;
+	opacity: 0;
+	left: 13%;
+	width: 970px;
+	height: 60%;
+	max-height: 486px;
+	padding: 10px;
+	background: #b0d1e0;
+}
+/*标题样式*/
+#section2 .pageThirdTitle{
+	position: absolute;
+	top: -70%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section2 .pageThirdTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*内容样式*/
+#section2 .conBox{
+	position: relative;
+	width: 147px;
+	height: 100%;
+	margin: 5px;
+	float: left;
+	color: white;
+}
+#section2 .conBoxFirst{
+	background: url('../img/page3.1.jpg') 50% 50% no-repeat;
+	width: 486px;
+}
+#section2 .conBoxSecond{
+	background: url('../img/page3.2.jpg') 50% 50% no-repeat;
+}
+#section2 .conBoxThird{
+	background: url('../img/page3.3.jpg') 50% 50% no-repeat;
+}
+#section2 .conBoxForth{
+	background: url('../img/page3.4.jpg') 50% 50% no-repeat;
+}
+#section2 .conBox .textA{
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	text-align: center;
+}
+#section2 .textA h1{
+	margin-bottom: 6px;
+}
+#section2 .textA p{
+	padding: 4px 0;
+}
+#section2 .conBox .textB{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	background:rgba(0,0,0,0.4);
+	display: none;
+}
+#section2 .conBoxFirst .textB{
+	display: block;
+}
+#section2 .conBoxFirst .textA{
+	display: none;
+}
+#section2 .textB img{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	width: 50px;
+}
+#section2 .textB h3{
+	padding: 10px;
+}
+/*page4 样式*/
+#section3{
+	/*position: relative;*/
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(2).jpg') no-repeat;
+}
+/*标题样式*/
+#section3 .pageForthTitle{
+	position: absolute;
+	top: 0%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section3 .pageForthTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*内容样式*/
+#section3 .pageFourthCon{
+	position: relative;
+	top: 28%;
+	left: 50%;
+	width: 820px;
+	margin-left: -420px;
+	-webkit-transform:translateX(-1000px) rotateZ(-135deg);
+	opacity: 0;
+	transition: all 2s;
+}
+#section3 .pageFourthCon a{
+	position: relative;
+	float: left;
+	display: block;
+	overflow: hidden;
+	width: 198px;
+	height: 364px;
+	margin-left: 5px;
+	background-size: 100% 100%;
+	color: white;
+}
+#section3 .forthConFirst{
+	background: url('../img/page4.1.png') no-repeat;
+}
+#section3 .forthConSecond{
+	background: url('../img/page4.2.png') no-repeat;
+}
+#section3 .forthConThird{
+	background: url('../img/page4.3.png') no-repeat;
+}
+#section3 .forthConForth{
+	background: url('../img/page4.4.png') no-repeat;
+}
+#section3 .forthCon{
+	position: absolute;
+	bottom: -75%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 1s;
+	background-color: rgba(0,0,0,0.4);
+}
+#section3 .forthCon h3{
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 26px;
+}
+#section3 .forthCon p{
+	width: 100%;
+	text-align: center;
+}
+/*page5 的样式*/
+#section4{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(3).jpg') no-repeat;
+}
+/*标题样式*/
+#section4 .pageFifthTitle{
+	position: absolute;
+	top: 0%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section4 .pageFifthTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*内容样式*/
+#section4 .fifthCon{
+	position: absolute;
+	top: 33%;
+	left: 14%;
+	width: 71%;
+}
+#section4 .fifthText{
+	/*position: relative;*/
+	width: 36%;
+	float: left;
+	-webkit-transform:translateX(-700px) rotateZ(-135deg);
+	opacity: 0;
+	transition: all 1s;
+}
+#section4 .fifthText img{
+	width: 72%;
+	display: block;
+	padding: 5% 15%;
+	transition: all 1s;
+}
+#section4 .fifthText img:hover{
+	-webkit-transform:scale(1.3,1.3);
+}
+#section4 .fifthText p{
+	color: white;
+	line-height: 18px;
+	font-size: 12px;
+}
+#section4 .fifthImg{
+	float: right;
+	width: 60%;
+	-webkit-transform:translateX(800px) rotateZ(135deg);
+	opacity: 0;
+	transition: all 1.5s;
+}
+#section4 .fifthImg img{
+	width: 100%;
+	height: 100%;
+}
+/*page6 的样式*/
+#section5{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(4).jpg') no-repeat;
+}
+/*标题样式*/
+#section5 .pageSixthTitle{
+	position: absolute;
+	top: 0%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section5 .pageSixthTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*内容样式*/
+#section5 .sixCon{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	width: 930px;
+	height: 456px;
+	margin-left: -465px;
+	-webkit-transform:translateY(-800px) rotateZ(90deg);
+	opacity: 0;
+	transition: all 1.5s;
+}
+#section5 .sixthWrap{
+	position: relative;
+	top: 0%;
+	width: 930px;
+	height: 456px;
+	/*margin: auto;*/
+	overflow: hidden;
+}
+#section5 .sixthBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 9999px;
+	transition: all 2s;
+}
+#section5 .list{
+	width: 930px;
+	float: left;
+}
+#section5 .list li{
+	width: 300px;
+	height: 226px;
+	float: left;
+	margin-left: 10px;
+}
+#section5 .list li img{
+	width: 300px;
+	height: 180px;
+}
+#section5 .list li p{
+	color: white;
+	margin: 5px 0;
+	font-size: 12px;
+}
+/*两边的小按钮*/
+#section5 .sixthBtn{
+	position: absolute;
+	top: 0px;
+	left: -330px;
+}
+#section5 div{
+	position: absolute;
+	top: 200px;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+}
+#section5 .leftBtn{
+	left: 280px;
+}
+#section5 .rightBtn{
+	left: 1300px;
+}
+/*page7 的样式*/
+#section6{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(5).jpg') no-repeat;
+}
+/*标题样式*/
+#section6 .pageSeventhTitle{
+	position: absolute;
+	top: 0%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section6 .pageSeventhTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*内容样式*/
+#section6 .seventhCon{
+	position: absolute;
+    left: 50%;
+    top: 29%;
+	width: 700px;
+	height: 440px;
+    margin-left: -350px;
+    -webkit-transform:rotateZ(-180deg);
+    opacity: 0;
+    transition: all 1s;
+}
+#section6 .seventhCon a{
+	position: absolute;
+	width: 219px;
+	height: 207px;
+}
+#section6 .seventhCon .benz{
+	left: 123px;
+}
+#section6 .seventhCon .sheraton{
+	left: 365px;
+}
+#section6 .seventhCon .hangk{
+	top: 120px;
+	left: 0px;
+}
+#section6 .seventhCon .luneng{
+	top: 120px;
+	left: 245px;
+}
+#section6 .seventhCon .poreche{
+	top: 120px;
+	left: 485px;
+}
+#section6 .seventhCon .lvcheng{
+	top: 230px;
+	left: 120px;
+}
+#section6 .seventhCon .meinian{
+	top: 230px;
+	left: 365px;
+}
+/*page8 的样式*/
+#section7{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(6).jpg') no-repeat;
+}
+/*标题样式*/
+#section7 .pageEighthTitle{
+	position: absolute;
+	top: 0%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section7 .pageEighthTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*内容样式*/
+#section7 .eighthWrap{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	width: 1130px;
+	height: 460px;
+	margin-left: -500px;
+}
+#section7 .eighthWrap h3{
+	border-left: 5px solid white;
+	padding-left: 10px;
+	color: white;
+	font-size: 14px;
+}
+#section7 .eighthWrap .formCon{
+	position: relative;
+	left: -500px;
+	width: 430px;
+	height: 460px;
+	float: left;
+	color: white;
+	font-size: 14px;
+	opacity: 0;
+}
+
+/*form 表单样式*/
+#section7 .formCon .input{
+	padding: 4px;
+	width: 372px;
+	height: 22px;
+	margin: 10px 0;
+	border: 1px solid white;
+	border-radius: 4px;
+	background: transparent;
+	color: white;
+}
+#section7 .formCon .select{
+	width: 380px;
+	height:32px;
+}
+#section7 .formCon .textarea{
+	margin-left: 30px;
+	height: 160px;
+	resize:none;
+}
+/*placeholder 改颜色*/
+#section7 .formCon .input::-webkit-input-placeholder{
+	color: white;
+}
+#section7 .formCon .liuYan{
+	position: absolute;
+	top: 190px;
+}
+/*提交按钮样式*/
+#section7 .formCon .btn{
+	position: absolute;
+	top:380px;
+	left: 60px;
+	border: none;
+	color: white;
+	font-size: 30px;
+	background: rgba(200,200,200,0.2);
+	width: 134px;
+	height: 41px;
+}
+#section7 .formCon .wrongBtn{
+	left: 260px;
+}
+/*右边人才招聘样式*/
+#section7 .eighthWrap .eighthCon{
+	position: relative;
+	left: 500px;
+	width: 500px;
+	height: 417px;
+	float: left;
+	margin-left: 130px;
+	border-left: 1px solid white;
+	padding-left: 30px;
+	opacity: 0;
+}
+#section7 .eighthWrap .eighthCon a{
+	display: inline-block;
+	width: 164px;
+	height: 176px;
+	background:url('../img/join.png');
+	background-size: 100% 100%;
+	text-align: center;
+	line-height: 176px;
+	font-size: 16px;
+	color: white;
+}
+/*page9 样式*/
+#section8{
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg(7).jpg') no-repeat;
+}
+/*标题样式*/
+#section8 .pageNinethTitle{
+	position: absolute;
+	top: 0%;
+	left: 39%;
+	width: 22%;
+	opacity: 0;
+}
+#section8 .pageNinethTitle img{
+	width: 100%;
+	height: 100%;
+}
+/*地图位置*/
+#section8 .mapCon{
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	width: 600px;
+	height: 400px;
+	margin-right: 50px;
+}
+#section8 .placeCon{
+	position: absolute;
+	top: 30%;
+	left: 52%;
+	color: white;
+}
+#section8 .placeCon .placeSelect{
+	height: 50px;
+	color: white;
+	font-size: 20px;
+	border: none;
+	background: transparent;
+}
+#section8 .ninethCon li{
+	border: 1px solid white;
+	margin: 10px 0;
+	padding: 5px;
+	border-left: 3px solid white;
+}
+#section8 .ninethCon p{
+	margin: 5px 0;
+	font-size: 16px;
+}
+#section8 .weifang{
+	display: none;
+}
+/*菜单样式*/
+.manuCon{
+	position: fixed;
+	top: 50%;
+	right: 0px;
+	z-index: 10;
+	margin-top: -139px;
+	display: none;
+}
+.manuCon .manu{
+	/*width: 100px;*/
+	/*height: 30px;*/
+	border: 4px solid rgb(222,205,175);
+}
+.manuCon .manu li{
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.manuCon .manu li:hover{
+	background: rgb(222,205,175);
+}
+.manuCon .manu li a{
+	display: block;
+	width: 100px;
+	height: 30px;
+	color: white;
+}
+/*小按钮*/
+.manuCon .arrowsBtn{
+	position: relative;
+	top: 168px;
+	left: -30px;
+	width: 50px;
+}
+.manuCon .arrowsBtn .arrowLeft{
+	display: none;
+}
+.manuBgColor{
+	background: rgb(222,205,175);
+}
+/*跳转about样式*/
+/*.pageCon{
+	display: none;
+}*/
+.skipCon{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

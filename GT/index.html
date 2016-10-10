@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>GT-健身</title>
+	<!-- 引入 fullpage 插件 -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<!-- 引入 swiper 插件 -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<!-- 引入外部样式表 -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- 标签样式初始化 -->
+	<style type="text/css">
+		body{margin:0;padding:0;background:#fff;font-size:14px;font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+		form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+		img{border:0;}
+		ul,li{list-style-type:none;}
+		a{color:#00007F;text-decoration:none;}
+		a:hover{text-decoration:none;}
+	</style>
+</head>
+<body>
+	<div class="manuCon">
+		<div class="arrowsBtn">
+			<img src="img/arrow-right.png" alt="" class="arrowRight">
+			<img src="img/arrow-left.png" alt="" class="arrowLeft">
+		</div>
+		<ul class="manu">
+			<li>
+				<a href="#page1">首页</a>
+			</li>
+			<li>
+				<a href="#page2">走进GT</a>
+			</li>
+			<li>
+				<a href="#page3">会馆介绍</a>
+			</li>
+			<li>
+				<a href="#page4">团课中心</a>
+			</li>
+			<li>
+				<a href="#page5">健身学院</a>
+			</li>
+			<li>
+				<a href="#page6">新闻动态</a>
+			</li>
+			<li>
+				<a href="#page7">联盟商户</a>
+			</li>
+			<li>
+				<a href="#page8">加入GT</a>
+			</li>
+			<li>
+				<a href="#page9">练习GT</a>
+			</li>
+		</ul>
+	</div>
+	<div id="fullpage">
+		<div id="staticImg">
+			<img src="http://img3.imgtn.bdimg.com/it/u=3560203617,1877871526&fm=21&gp=0.jpg" class="img2">
+		</div>
+		<!-- page1 -->
+		<div class="section " id="section0">
+			<!-- 导航 -->
+			<div class="nav">
+				<div class="navCon">
+					<div class="navImg">
+						<a href="#page1">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="navBar navBar2">
+						<a href="#page2">
+							<p>走进GT</p>
+							<b>About Us</b>
+						</a>
+					</div>
+					<div class="navBar navBar1">
+						<a href="#page3">
+							<p>会馆介绍</p>
+							<b>Hall Introduction</b>
+						</a>
+					</div>
+					<div class="navBar navBar1">
+						<a href="#page4">
+							<p>团课中心</p>
+							<b>Lessons Center</b>
+						</a>
+					</div>
+					<div class="navBar navBar1">
+						<a href="#page5">
+							<p>健身学院</p>
+							<b>Fitness College</b>
+						</a>
+					</div>
+					<div class="navBar navBar1">
+						<a href="#page6">
+							<p>新闻动态</p>
+							<b>New & Activity</b>
+						</a>
+					</div>
+					<div class="navBar navBar1">
+						<a href="#page7">
+							<p>联盟商户</p>
+							<b>Enterprose Union</b>
+						</a>
+					</div>
+					<div class="navBar navBar2">
+						<a href="#page8">
+							<p>加入GT</p>
+							<b>Join Us</b>
+						</a>
+					</div>
+					<div class="navBar navBar2">
+						<a href="#page9">
+							<p>联系GT</p>
+							<b>Contact Us</b>
+						</a>
+					</div>
+					<div class="search">
+						<img src="img/search.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- 轮播图 -->
+			<div class="carousel">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+					    <img src="img/page1.1.jpg" alt="" class="swiper-slide">
+					    <img src="img/page1.2.jpg" alt=""  class="swiper-slide">
+					</div>
+				</div>
+				<div class="pagination"></div>
+			</div>
+		</div>
+		<!-- page2 -->
+		<div class="section" id="section1">
+			<!-- 标题图片 -->
+			<div class="titleImg">
+				<img src="img/page2.tit.png" alt="">
+			</div>
+			<!-- 六张图片 -->
+			<div class="pageCon">
+				<div class="box boxFirst GTSkip">
+					<div class="pageText pageTextF">
+						<p class="bGt"><b>GT简介</b></p>
+						<p class="pGt">About GT</p>
+					</div>
+					<div class="pageImg pageImgF">
+						<img src="img/page2.1.png" alt="">
+					</div>
+				</div>
+				<div class="box boxSecond GTSkip">
+					<div class="pageText pageTextS">
+						<p class="bGt"><b>GT文化</b></p>
+						<p class="pGt">GT Culture</p>
+					</div>
+					<div class="pageImg pageImgS">
+						<img src="img/page2.2.png" alt="">
+					</div>
+				</div>
+				<div class="box boxThird  GTSkip">
+					<div class="pageText pageTextT">
+						<p class="bGt"><b>GT历程</b></p>
+						<p class="bLast pGt">GT Developements</p>
+					</div>
+					<div class="pageImg pageImgT">
+						<img src="img/page2.3.png" alt="">
+					</div>
+				</div>
+			</div>
+			<!-- 跳转界面 about -->
+			<div class="aboutCon skipCon">
+				<iframe src="template/about.html" width="100%" height="100%" scrolling="no" style="border: none;">
+					<a href="template/about.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+				</iframe>
+			</div>
+			<!-- 跳转界面 culture -->
+			<div class="cultureCon skipCon">
+				<iframe src="template/culture.html" width="100%" height="100%" scrolling="no" style="border: none;">
+					<a href="template/culture.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+				</iframe>
+			</div>
+			<!-- 跳转界面 developement -->
+			<div class="developementCon skipCon">
+				<iframe src="template/development.html" width="100%" height="100%" scrolling="no" style="border: none;">
+					<a href="template/development.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+				</iframe>
+			</div>
+		</div>
+		<!-- page3 -->
+		<div class="section moveDown" id="section2">
+			<!-- 标题图片 -->
+			<div class="pageThirdTitle">
+				<img src="img/page3.tit.png" alt="">
+			</div>
+			<!-- 内容 -->
+			<div class="pageThirdCon">
+				<div class="conBox conBoxFirst">
+					<div class="textA">
+						<img src="img/01.png" alt="">
+						<p>GT健身</p>
+						<p>济南全运村会馆</p>
+					</div>
+					<div class="textB">
+						<img src="img/01.png" alt="">
+						<h3>GT健身济南全运村会馆</h3>
+						<p>2010年11月开始筹建，2011年5月正式投入营业，会馆毗邻具有东荷西柳之称的奥体中心，坐落在山峦环抱优雅静谧的全运村高尚社区，总营业面积9000余平方米，是集健身、休闲为一体的高端私人健身会馆。</p>
+					</div>
+				</div>
+				<div class="conBox conBoxSecond">
+					<div class="textA">
+						<img src="img/02.png" alt="">
+						<p>GT健身</p>
+						<p>济南全运村会馆</p>
+					</div>
+					<div class="textB">
+						<img src="img/02.png" alt="">
+						<h3>GT健身济南全运村会馆</h3>
+						<p>2010年11月开始筹建，2011年5月正式投入营业，会馆毗邻具有东荷西柳之称的奥体中心，坐落在山峦环抱优雅静谧的全运村高尚社区，总营业面积9000余平方米，是集健身、休闲为一体的高端私人健身会馆。</p>
+					</div>
+				</div>
+				<div class="conBox conBoxThird">
+					<div class="textA">
+						<img src="img/03.png" alt="">
+						<p>GT健身</p>
+						<p>济南全运村会馆</p>
+					</div>
+					<div class="textB">
+						<img src="img/03.png" alt="">
+						<h3>GT健身济南全运村会馆</h3>
+						<p>2010年11月开始筹建，2011年5月正式投入营业，会馆毗邻具有东荷西柳之称的奥体中心，坐落在山峦环抱优雅静谧的全运村高尚社区，总营业面积9000余平方米，是集健身、休闲为一体的高端私人健身会馆。</p>
+					</div>
+				</div>
+				<div class="conBox conBoxForth">
+					<div class="textA">
+						<img src="img/04.png" alt="">
+						<p>GT健身</p>
+						<p>济南全运村会馆</p>
+					</div>
+					<div class="textB">
+						<img src="img/04.png" alt="">
+						<h3>GT健身济南全运村会馆</h3>
+						<p>2010年11月开始筹建，2011年5月正式投入营业，会馆毗邻具有东荷西柳之称的奥体中心，坐落在山峦环抱优雅静谧的全运村高尚社区，总营业面积9000余平方米，是集健身、休闲为一体的高端私人健身会馆。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- page4 -->
+		<div class="section moveDown" id="section3">
+			<!-- 标题图片 -->
+			<div class="pageForthTitle">
+				<img src="img/page4.tit.png" alt="">
+			</div>
+			<!-- 内容 -->
+			<div class="pageFourthCon pageFourthConBox">
+				<a href="##" class="forthConFirst">
+					<div class="forthCon">
+						<h3>课程介绍</h3>
+						<p>Lesson Introductions</p>
+					</div>
+				</a>
+				<a href="##" class="forthConSecond">
+					<div class="forthCon">
+						<h3>本月课表</h3>
+						<p>Syllabus This Mouth</p>
+					</div>
+				</a>
+				<a href="##" class="forthConThird">
+					<div class="forthCon">
+						<h3>明星教练</h3>
+						<p>Start Coach</p>
+					</div>
+				</a>
+				<a href="##" class="forthConForth">
+					<div class="forthCon">
+						<h3>公开课</h3>
+						<p>Demoustration Class</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- page5 -->
+		<div class="section moveDown" id="section4">
+			<div class="pageFifthTitle">
+				<img src="img/page5.tit.png" alt="">
+			</div>
+			<div class="fifthCon">
+				<div class="fifthText fifthBox">
+					<a href="#" class="aImg">
+						<img src="img/page5.chibang.png" alt="">
+					</a>
+					<p>GT国际健身学院(GTIFA)是国内占地面积最大、配套设施最完善的健身教练培训基地。<br>
+					•全运村校区面积超过9000平方米，毗邻具有东荷西柳之称的奥体中心，坐落在山峦环抱优雅静谧的全运村高档社区。<br>
+					•领秀城校区位于舜耕路南延长线领秀城社区,面积5000余平,是济南首家引进欧美健身新概念的综合健身基地。<br>
+					GT国际健身学院是一家集教育培训、教练输出、俱乐部综合管理为一体的健身中心，在全国与超过100家健身俱乐部保持长期合作关系，从而保证每个学员在各地的就业需求！</p>
+					<p>全运村校区：0531-67870218</p>
+					<p>领秀城校区：0531-88988087</p>
+				</div>
+				<div class="fifthImg fifthBox">
+					<img src="img/page5.1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- page6 -->
+		<div class="section moveDown" id="section5">
+			<div class="pageSixthTitle">
+				<img src="img/page6.tit.png" alt="">
+			</div>
+			<div class="sixCon">
+				<div class="sixthWrap">
+					<div class="sixthBox">
+						<ul class="list">
+							<li>
+								<a href="##">
+									<img src="img/1.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身大明湖会馆】团体私教公开课精彩瞬间</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/2.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身领秀城会馆】西式调酒培训圆满结束</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/3.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身大明湖会馆】乒乓球公开课圆满结束</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/4.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/5.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/6.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+						</ul>
+						<ul class="list">
+							<li>
+								<a href="##">
+									<img src="img/7.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身大明湖会馆】团体私教公开课精彩瞬间</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/8.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身领秀城会馆】西式调酒培训圆满结束</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/9.jpg" alt="">
+								</a>
+
+								<p>2016-09-16</p>
+								<p>【GT健身大明湖会馆】乒乓球公开课圆满结束</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/10.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/11.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/12.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+						</ul>
+						<ul class="list">
+							<li>
+								<a href="##">
+									<img src="img/13.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身大明湖会馆】团体私教公开课精彩瞬间</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/14.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身领秀城会馆】西式调酒培训圆满结束</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/15.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+								<p>【GT健身大明湖会馆】乒乓球公开课圆满结束</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/16.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/17.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/18.jpg" alt="">
+								</a>
+								<p>2016-09-16</p>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="sixthBtn">
+					<div class="leftBtn"><</div>
+					<div class="rightBtn">></div>
+				</div>
+			</div>
+		</div>
+		<!-- page7 -->
+		<div class="section moveDown" id="section6">
+			<div class="pageSeventhTitle">
+				<img src="img/page7.tit.png" alt="">
+			</div>
+			<div class="seventhCon">
+				<a href="#" class="benz">
+					<img src="img/benz.png" alt="">
+				</a>
+				<a href="#" class="sheraton">
+					<img src="img/sheraton.png" alt="">
+				</a>
+				<a href="#" class="hangk">
+					<img src="img/hangk.png" alt="">
+				</a>
+				<a href="#" class="luneng">
+					<img src="img/luneng.png" alt="">
+				</a>
+				<a href="#" class="poreche">
+					<img src="img/poreche.png" alt="">
+				</a>
+				<a href="#" class="lvcheng">
+					<img src="img/lvcheng.png" alt="">
+				</a>
+				<a href="#" class="meinian">
+					<img src="img/meinian.png" alt="">
+				</a>
+			</div>
+		</div>
+		<!-- page8 -->
+		<div class="section moveDown" id="section7">
+			<div class="pageEighthTitle">
+				<img src="img/page8.tit.png" alt="">
+			</div>
+			<div class="eighthWrap">
+				<div class="formCon">
+					<h3>预约会馆体验健身</h3>
+					<form action="">
+						<label for="name">姓名:</label>&nbsp&nbsp&nbsp
+						<input type="text" placeholder="请输入真实姓名" id="name" class="input">
+						<br>
+						<label for="tel">电话:</label>&nbsp&nbsp&nbsp
+						<input type="text" placeholder="请输入联系电话" id="tel" class="input">
+						<br>
+						<label for="hotel">会馆:</label>&nbsp&nbsp&nbsp
+						<select name="" id="hotel" class="input select">
+							<option value="">选择会馆</option>
+							<option value="">济南全运会会馆</option>
+							<option value="">潍坊阳光会馆</option>
+							<option value="">济南大明湖会馆</option>
+							<option value="">济南领秀城会馆</option>
+						</select>
+						<br>
+						<label for="message" class="liuYan">留言:</label>&nbsp&nbsp&nbsp
+						<textarea name="" id="message" placeholder="留言内容" class="input textarea"></textarea>
+						<input type="button" value="√" class="btn right">
+						<input type="button" value="X" class="btn wrongBtn">
+					</form>
+				</div>
+				<div class="eighthCon">
+					<h3>GT人才招聘</h3>
+					<a href="#" class="aFirst">总部</a>
+					<a href="#" class="aSecond">全运村会馆</a>
+					<a href="#" class="aThird">阳光会馆</a>
+					<a href="#" class="aForth">大明湖会馆</a>
+					<a href="#" class="aFifth">领秀城会馆</a>
+				</div>
+			</div>
+		</div>
+		<!-- page9 -->
+		<div class="section moveDown" id="section8">
+			<div class="pageNinethTitle">
+				<img src="img/page9.tit.png" alt="">
+			</div>
+			<div class="mapCon">
+				<iframe src="map.html" width="600" height="400" scrolling="no" style="border: none;">
+					<a href="map.html">你的浏览器不支持iframe页面嵌套，请点击这里访问页面内容。</a>
+				</iframe>
+			</div>
+			<div class="placeCon">
+				<form action="">
+					<img src="img/icon_map.png" alt="">
+					<select name="" id="" class="placeSelect">
+						<option value="0" class="option">济南</option>
+						<option value="1" class="option">潍坊</option>
+					</select>
+				</form>
+				<ul class="jinan ninethCon">
+					<li>
+						<p>济南全运村会馆</p>
+						<p>地址:济南市历下区奥体东路海尔绿城全运村<br>GT健身</p>
+						<p>电话:0531-67870555/67873666</p>
+					</li>
+					<li>
+						<p>济南大明湖会馆</p>
+						<p>地址:济南市天桥区少年路2-6号</p>
+						<p>电话:0531-67870555/67873666</p>
+					</li>
+					<li>
+						<p>济南领秀城会馆</p>
+						<p>地址:济南市市中区领秀城商业街中心广场</p>
+						<p>电话:0531-67870555/67873666</p>
+					</li>
+				</ul>
+				<ul class="weifang ninethCon">
+					<li>
+						<p>潍坊阳光会馆</p>
+						<p>地址:潍坊市奎文区胜利东街阳光100城市广场</p>
+						<p>电话:0531-67870555/67873666</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</html>

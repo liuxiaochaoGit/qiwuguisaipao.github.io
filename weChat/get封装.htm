@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://localhost/PHP/ajax/02.get%E5%B0%81%E8%A3%85.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>get封装</title>
+</head>
+<body>
+	<p id="p"></p>
+	<button id="btn">提交请求</button>
+
+	<script type="text/javascript">
+		// AJAX 中 get 请求方法
+		function httpGet(url,successCallback,errorCallback){
+			// 处理兼容问题
+			var xhr = null;
+			if(window.XMLHttpRequest){
+				xhr = new XMLHttpRequest();
+			}else{
+				xhr = new ActionXObject("Microsoft.XMLHttp");
+			}
+
+			// 配置请求对象的信息
+			xhr.open("GET",url,true);
+			// 发送请求
+			xhr.send();
+			// 监听状态的改变
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						if(successCallback){
+							successCallback(xhr.responseText);
+						}
+					}else{
+						if(errorCallback){
+							errorCallback(xhr.statusText);
+						}
+					}
+				}
+			}
+		}
+
+		var btn = document.getElementById('btn');
+		var p = document.getElementById('p');
+		btn.onclick = function(){
+			var url = "http://localhost/PHP/ajax/get.php?username=zhanadvadgsan&password=235689";
+			// 调用方法
+			httpGet(url,function(responseText){
+				p.innerHTML = responseText;
+			},function(statusText){
+				p.innnerHTML = statusText;
+			});
+		}
+
+
+
+
+
+	</script>
+</body></html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.cultureWrap{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: url('../img/wenhua.bg.jpg') no-repeat;
+			background-size: 100% 100%;
+			overflow: hidden;
+		}
+		.cultureWrap img{
+			position: absolute;
+			opacity: 0;
+		}
+		.imgT{
+			top: 36%;
+			left: 37%;
+			width: 21%;
+			opacity: 0;
+			animation: imgTChange 0.5s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+		@-webkit-keyframes imgTChange{
+			from{
+				-webkit-transform:scale(1.5,0.5);
+			}
+			50%{
+				-webkit-transform:scale(1,1.3);
+			}
+			75%{
+				-webkit-transform:scale(1.2,0.8);
+			}
+			to{
+				-webkit-transform:scale(1,1);
+				opacity: 1;
+			}
+
+		}
+		.img1{
+			top: 33%;
+			left: 6%;
+			width: 135px;
+		}
+		.img2{
+			top: 50%;
+			left: 6%;
+			width: 200px;
+		}
+		.img3{
+			top: 80%;
+			left: 12%;
+			width: 135px;
+		}
+		.img4{
+			top: 34%;
+			right: 5%;
+			width: 150px;
+		}
+		.img5{
+			top: 54%;
+			right: 18%;
+			width: 200px;
+		}
+		.img6{
+			top: 75%;
+			right: -10%;
+			width: 305px;
+		}
+		.aBack{
+			display: block;
+			text-decoration:none;
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			width: 100px;
+			height: 30px;
+			margin-left: -50px;
+			color: white;
+			text-align: center;
+			line-height: 30px;
+			border:1px solid white;
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="cultureWrap">
+		<img src="../img/wenhua.tit.png" alt="" class="imgT">
+		<img src="../img/wenhua_01.png" alt="" class="img1">
+		<img src="../img/wenhua_02.png" alt="" class="img2">
+		<img src="../img/wenhua_03.png" alt="" class="img3">
+		<img src="../img/wenhua_04.png" alt="" class="img4">
+		<img src="../img/wenhua_05.png" alt="" class="img5">
+		<img src="../img/wenhua_06.png" alt="" class="img6">
+		<a href="../index.html#page2" class="aBack">BACK ></a>
+	</div>
+</body>
+	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		setTimeout(animateFn(),1000);
+
+
+		// 图片的动画
+		function animateFn(){
+			$('.img1').animate({
+				left: '16%',
+				opacity:'1'
+			},1000,function(){
+				$('.img2').animate({
+					left:'16%',
+					opacity:'1'
+				},1000,function(){
+					$('.img3').animate({
+						left:'29%',
+						opacity:'1'
+					},1000,function(){
+						$('.img4').animate({
+							right:'18%',
+							opacity:'1'
+						},1000,function(){
+							$('.img5').animate({
+								right:'22%',
+								opacity:'1'
+							},1000,function(){
+								$('.img6').animate({
+									right:'25',
+									opacity:'1'
+								},1000,function(){
+									$('.aBack').animate({
+										bottom:'100px',
+										opacity:'1'
+									},1000);
+								});
+							});
+						});
+					});
+				});
+			});
+		}
+	</script>
+</html>
