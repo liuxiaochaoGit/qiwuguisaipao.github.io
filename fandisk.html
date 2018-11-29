@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        .canvas-con {
+            position: relative;
+            width: 600px;
+            height: 600px;
+
+        }
+
+        .form-con, .canvas-con {
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .canvas-con > canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 10px #000;
+            margin: auto;
+        }
+
+        .canvas-con > canvas:nth-child(2) {
+            background: none;
+            pointer-events: none;
+        }
+
+        .form-con {
+            width: calc(100% - 700px);
+        }
+
+        ul li {
+            list-style-type: none;
+            padding: 10px 0;
+        }
+
+        li input {
+            width: 100px;
+            padding: 3px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            color: #666;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="canvas-con">
+    <canvas id="cvs" width="600" height="600">
+        您的浏览器太low了，建议升级或者更换浏览器
+    </canvas>
+    <canvas id="lineCvs" width="600" height="600">
+        您的浏览器太low了，建议升级或者更换浏览器
+    </canvas>
+</div>
+<div class="form-con">
+    <ul>
+        <li>
+            <span>扇形区域：</span>
+            <input id="partition" type="number" max="50" min="3" value="6">
+        </li>
+        <li>
+            <span>画笔颜色：</span>
+            <input id="color" type="color" value="#75d29a">
+        </li>
+        <li>
+            <span>画笔粗细：</span>
+            <input id="extent" type="range" max="20" min="1" value="2" title="2">
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    let canvas = document.getElementById('cvs'),
+        lineCanvas = document.getElementById('lineCvs'),
+        partition = document.getElementById('partition'),
+        color = document.getElementById('color'),
+        extent = document.getElementById('extent'),
+        cvs = canvas.getContext('2d'),
+        lineCvs = lineCanvas.getContext('2d'),
+        radius = canvas.width,
+        ob = {};
+
+
+    cvs.lineWidth = extent.value;
+    cvs.strokeStyle = color.value;
+    lineCvs.lineWidth = 1;
+    lineCvs.strokeStyle = '#ccc';
+    let num = partition.value;
+    lineCvs.translate(lineCvs.canvas.width / 2, lineCvs.canvas.height / 2);
+
+
+    class Draw {
+        constructor() {
+        }
+
+        // 绘制扇形分区
+        drawLine(num) {
+            // lineCvs.translate(0, 0);
+            let _ob = {},
+                centerX = _ob.startX = radius / 2,
+                centerY = _ob.startY = radius / 2,
+                moveX = _ob.moveX = radius / 2,
+                moveY = _ob.moveY = 0,
+                _this = this;
+            // 角度
+            let deg = 360 / num;
+            for (var i = 0; i < num; i++) {
+                // 弧度  deg * Math.PI / 180
+                lineCvs.rotate(deg * Math.PI / 180);
+                _this.draw(lineCvs, _ob);
+                lineCvs.save();
+            }
+        }
+
+        // 旋转
+        rotateDraw(num, ob) {
+            let deg = 360 / num,
+                _this = this;
+            // 位移 坐标定于圆心  让旋转围绕圆心旋转
+            cvs.translate(radius / 2, radius / 2);
+            for (var i = 0; i < 360; i++) {
+                // 取出之前保存的状态
+                cvs.restore();
+                cvs.rotate(deg * Math.PI / 180);
+                this.draw(cvs, ob);
+                // 绘制完保存状态
+                cvs.save();
+            }
+        }
+
+        // 绘制
+        draw(cvs, ob) {
+            let _cvs = cvs,
+                _ob = ob;
+            _cvs.beginPath();
+            // 坐标减去位移的长度
+            _cvs.moveTo(_ob.startX - radius / 2, _ob.startY - radius / 2);
+            _cvs.lineTo(_ob.moveX - radius / 2, _ob.moveY - radius / 2);
+            _cvs.stroke();
+        }
+
+        moveDraw(e) {
+            ob.startX = ob.moveX;
+            ob.startY = ob.moveY;
+            let moveX = ob.moveX = e.clientX - canvas.parentElement.offsetLeft + window.scrollX,
+                moveY = ob.moveY = e.clientY - canvas.parentElement.offsetTop + window.scrollY;
+            this.rotateDraw(num, ob);
+        }
+    }
+
+    let draw = new Draw();
+    draw.drawLine(num);
+    // 监听事件 画图
+    canvas.addEventListener('mousedown', (e) => {
+        let ob = {};
+        let startX = ob.startX = ob.moveX = e.clientX - canvas.parentElement.offsetLeft + window.scrollX,
+            startY = ob.startY = ob.moveY = e.clientY - canvas.parentElement.offsetTop + window.scrollY;
+        document.addEventListener('mousemove', moveE = (e) => {
+            ob.startX = ob.moveX;
+            ob.startY = ob.moveY;
+            let moveX = ob.moveX = e.clientX - canvas.parentElement.offsetLeft + window.scrollX,
+                moveY = ob.moveY = e.clientY - canvas.parentElement.offsetTop + window.scrollY;
+            draw.rotateDraw(num, ob);
+        });
+        document.addEventListener('mouseup', (e) => {
+            document.removeEventListener('mousemove', moveE);
+        });
+    });
+
+    // 改变风格
+    partition.addEventListener('input', (e) => {
+        num = e.target.value;
+        cvs.clearRect(-cvs.canvas.width / 2, -cvs.canvas.height / 2, cvs.canvas.width, cvs.canvas.height);
+        lineCvs.clearRect(-lineCvs.canvas.width / 2, -lineCvs.canvas.height / 2, lineCvs.canvas.width, lineCvs.canvas.height);
+        draw.drawLine(num);
+        partition.title = num;
+    });
+    color.addEventListener('input', (e) => {
+        cvs.restore();
+        cvs.strokeStyle = e.target.value;
+        cvs.save();
+    });
+    extent.addEventListener('input', (e) => {
+        cvs.restore();
+        cvs.lineWidth = e.target.value;
+        cvs.save();
+    });
+</script>
+</html>
